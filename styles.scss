@@ -19,12 +19,17 @@ body {
     width: 100%;
     min-height: 100vh;
     font-size: $FontSize;
+    gap: 5rem;
 }
 
 // HEADER
 .header {
+    height: 30rem;
     display: grid;
+    align-items: start;
     background: url("/images/mobile/image-hero.jpg");
+    object-position: center;
+    object-fit: fill;
 
 
     @media (min-width: $Breakpoint) {
@@ -71,26 +76,6 @@ body {
     @media (max-width: $Breakpoint) {
         display: none;
     }
-
-    .nav__list {
-        list-style: none;
-
-        @media (min-width: $Breakpoint) {
-            display: flex;
-            column-gap: 0.5rem;
-        }
-
-    }
-
-    .nav__link {
-        text-decoration: none;
-        color: $White;
-        font-weight: 400;
-
-        &:hover {
-            border-bottom: 0.1rem solid $White;
-        }
-    }
 }
 
 // When ham menu is opened
@@ -125,17 +110,6 @@ body {
         display: flex;
         column-gap: 1rem;
         background-color: transparent;
-
-    }
-
-    .nav__list {
-        list-style: none;
-
-        @media (min-width: $Breakpoint) {
-            display: flex;
-            column-gap: 1rem;
-        }
-
     }
 
     .nav__link {
@@ -150,3 +124,117 @@ body {
 }
 
 // HERO
+.header__hero {
+    padding: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    .hero__text {
+        padding: 1rem;
+        border: solid 0.1rem $White;
+        color: $White;
+        font-size: 3rem;
+        text-transform: capitalize;
+
+        @media (min-width: 37rem) {
+            width: 30rem
+        }
+
+    }
+}
+
+
+// MAIN
+.main {
+    display: grid;
+    align-items: start;
+    gap: 1rem;
+    padding-inline: 2rem;
+}
+
+// Leader Section
+
+
+// Gallary
+
+
+
+// FOOTER
+.footer {
+    background-color: $Black;
+    color: $White;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    padding: 2rem;
+    gap: 2rem;
+
+    @media (min-width: 37rem) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;;
+    }
+
+}
+
+.footer__menu,
+.footer__socials {
+    display: grid;
+    gap: 2rem;
+}
+
+.footer__socials {
+    @media (min-width: 37rem) {
+        justify-items: end;
+    }
+}
+
+.footer__social__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    svg:hover {
+        cursor: pointer;
+    }
+
+    @media (min-width: 37rem) {
+        justify-content: end;
+    }
+}
+
+.footer__copyrights {
+    color: $Grey;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+// Shared Styles
+.nav__list {
+    display: grid;
+    justify-content: center;
+    list-style: none;
+    row-gap: 1rem;
+    
+    @media (min-width: $Breakpoint) {
+        display: flex;
+        column-gap: 0.5rem;
+        padding-inline-start: 0;
+    }
+
+    .nav__link {
+        text-decoration: none;
+        color: $White;
+
+        &:hover {
+            border-bottom: 0.1rem solid $White;
+        }
+    }
+}
