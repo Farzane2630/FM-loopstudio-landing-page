@@ -2,7 +2,7 @@
 // COLORS
 $White: hsl(0, 0%, 100%);
 $Black: hsl(0, 0%, 0%);
-$Grey: hsl(0, 0%, 85%);
+$Gray: hsl(0, 0%, 85%);
 
 // TYPOGRAPHY
 $FontSize: 1.06rem;
@@ -75,7 +75,6 @@ body {
     }
 }
 
-
 .header__nav {
     display: flex;
     column-gap: 1rem;
@@ -86,13 +85,20 @@ body {
     }
 }
 
-// When ham menu is opened
+// When ham-menu is opened
 .header__top--open {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: $Black;
+    z-index: 9999999999;
+    padding-bottom: 50%;
+
+    .nav__list{
+        justify-content: start;
+        gap: 1.5rem;
+    }
 
     .header__nav {
         width: 100%;
@@ -166,9 +172,66 @@ body {
     @include GridStart();
 }
 
+.gallary__header {
+    @include Flex(center);
+
+
+    @media (min-width: 37rem) {
+        @include Flex(space-between);
+    }
+}
+
+.gallary__title {
+    font-size: 3rem;
+    font-weight: 100;
+
+}
+
+.gallary__button {
+    background-color: transparent;
+    padding: 0.5rem 1.2rem;
+    border: solid 0.1rem $Black;
+    border-radius: 0;
+
+    .gallary__button__link {
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+        word-spacing: 0.4rem;
+        font-weight: 300;
+        font-family: $JosefinSans;
+    }
+
+    &:hover {
+        background-color: $Black;
+        color: $White;
+    }
+}
+
+.gallary__button--top {
+    display: none;
+
+    @media (min-width: 37rem) {
+        display: block;
+    }
+
+}
+
+.gallary__button--bottom {
+    max-width: fit-content;
+    justify-self: center;
+
+    @media (min-width: 37rem) {
+        display: none;
+    }
+
+}
+
+
 .gallary__body {
     @include GridStart();
     gap: 1rem;
+    padding-block: 1rem;
 
     @media (min-width: 37rem) {
         grid-template-columns: repeat(4, 1fr);
@@ -180,20 +243,18 @@ body {
 
     &:hover {
         .gallary__item__text {
-            color: $Grey;
+            color: $Gray;
         }
     }
 }
 
 .gallary__pic {
     filter: brightness(70%);
-    height: 14rem;
     position: relative;
 
 
     img {
         width: 100%;
-        height: 100%;
 
         &:hover {
             filter: brightness(100%);
@@ -208,7 +269,7 @@ body {
     color: $White;
     font-size: 2.5rem;
     position: absolute;
-    bottom: 10%;
+    bottom: 8%;
     left: 2%;
 }
 
@@ -255,13 +316,9 @@ body {
 }
 
 .footer__copyrights {
-    color: $Grey;
+    color: $Gray;
     font-size: 1rem;
 }
-
-
-
-
 
 
 // Shared Styles
