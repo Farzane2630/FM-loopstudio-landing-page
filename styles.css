@@ -237,30 +237,32 @@ body {
 .gallary__item {
   display: grid;
   align-items: start;
+  position: relative;
+}
+.gallary__item:hover {
+  cursor: pointer;
+}
+.gallary__item:hover .gallary__pic {
+  filter: brightness(70%);
+  opacity: 50%;
 }
 .gallary__item:hover .gallary__item__text {
   color: hsl(0, 0%, 85%);
 }
 
 .gallary__pic {
-  filter: brightness(70%);
-  position: relative;
+  filter: brightness(45%);
 }
 .gallary__pic img {
   width: 100%;
-}
-.gallary__pic img:hover {
-  filter: brightness(100%);
-  opacity: 50%;
-  cursor: pointer;
 }
 
 .gallary__item__text {
   color: hsl(0, 0%, 100%);
   font-size: 2rem;
   position: absolute;
-  bottom: 8%;
-  left: 2%;
+  bottom: 1rem;
+  left: 0.5rem;
 }
 
 .footer {
