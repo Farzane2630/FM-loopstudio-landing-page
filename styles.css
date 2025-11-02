@@ -28,6 +28,7 @@ body {
   align-items: center;
   padding-inline: 1rem;
   padding-block: 0.5rem;
+  transition: display 1s linear;
 }
 
 .header__icon__container {
@@ -185,10 +186,13 @@ body {
 }
 
 .gallary__button {
+  text-transform: uppercase;
   background-color: transparent;
   padding: 0.5rem 1.2rem;
   border: solid 0.1rem hsl(0, 0%, 0%);
   border-radius: 0;
+  transition: background-color 0.9s linear;
+  transition: color 0.5s linear;
 }
 .gallary__button .gallary__button__link {
   text-decoration: none;
