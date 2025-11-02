@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/fm-loopstudio-landing-page-sp4Fw2NRuk)
+- Live Site URL: [Add live site URL here](https://fm-loopstudio-landing-page-i7z84kvti-farzane2630s-projects.vercel.app/)
 
 ## My process
 
@@ -43,11 +43,15 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- SASS
 
 ### What I learned
+
+1. create a "brighter or darker effect(layout)" on an element(picture, card, button, ...) using filter: brightness(n%):
+
+```css
+filter: brightness(70%);
+```
 
 ### Continued development
 
